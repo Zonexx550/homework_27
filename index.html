@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript №8 by Emin</title>
+    <script defer src="./js/index.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .task-button {
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Задания JavaScript №8</h1>
+
+      <button class="task-button" id="taskFirstBtn">
+        1. Написать функцию возведения числа в степень.
+      </button>
+      <button class="task-button" id="taskSecondBtn">
+        2. Написать функцию поиска наибольшего общего делителя.
+      </button>
+      <button class="task-button" id="taskThirdBtn">
+        3. Написать функцию для поиска максимальной цифры в числе.
+      </button>
+      <button class="task-button" id="taskForthBtn">
+        4. Написать функцию, которая определяет простое ли переданное число.
+      </button>
+      <button class="task-button" id="taskFifthBtn">
+        5. Напиши функцию checkAge(age, callback), которая принимает возраст и
+        функцию обратного вызова.
+        ● Если age >= 18, вызывай callback, передав туда строку "Доступ
+        разрешён".
+        ● Если age < 18, вызывай callback, передав "Доступ запрещён".        
+      </button>
+      <button class="task-button" id="taskSixBtn">
+        6. Проверка на палиндром
+        Палиндром — это слово, которое читается одинаково в обе стороны ("racecar",
+        "madam").
+      </button>
+      <button class="task-button" id="taskSevenBtn">
+        7. Написать функцию, которая возвращает число Фибоначчи по переданному
+        порядковому номеру. Числа Фибоначчи: 1, 1, 2, 3, 5, 8, 13… Ряд основывается на том,
+        что каждое число равно сумме двух предыдущих чисел. Например: порядковый номер
+        3 – число 2, порядковый номер 6 – число 8.
+      </button>
+    </div>
+  </body>
+</html>
