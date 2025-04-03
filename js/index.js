@@ -1,6 +1,8 @@
 document.getElementById("taskFirstBtn").addEventListener("click", function () {
-  const numberPower = (num, power) => Math.pow(num, power);
-  
+ const numberPower = (base, exp) => {
+    if (exp === 0) return 1;
+    return base * numberPower(base, exp - 1);
+};
   console.log(numberPower(2, 3)); 
   console.log(numberPower(5, 2));
 });
@@ -16,15 +18,11 @@ console.log(getGcd(12, 18));
 });
 
 document.getElementById("taskThirdBtn").addEventListener("click", function () {
-const maxDigit = (num) => {
-  let max = 0;
-  for (let digit of `${num}`) {
-      if (digit > max) {
-          max = digit;
-      }
-  } return max;
+const maxDigit = (num, max = 0) => {
+    if (num === 0) return max;
+    const lastDigit = num % 10;
+    return maxDigit(Math.floor(num / 10), lastDigit > max ? lastDigit : max);
 };
-
 console.log(maxDigit(1273));
 console.log(maxDigit(18276));
 console.log(maxDigit(88976));
@@ -66,10 +64,10 @@ checkAge(14, (status) => {
 document.getElementById("taskSixBtn").addEventListener("click", function () {
   const isPalindrome = (str) => {
     const checkStr = str.toLowerCase();
-    const reverseStr = checkStr.split('').reverse().join('');
-    return checkStr === reverseStr;
+    if (checkStr.length <= 1) return true;
+    if (checkStr[0] !== checkStr[checkStr.length - 1]) return false;
+    return isPalindrome(checkStr.slice(1, -1));
 };
-
 console.log(isPalindrome("RaCeCar"));
 console.log(isPalindrome("RaCeCarR"));
 console.log(isPalindrome("MaDaM"));
